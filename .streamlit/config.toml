@@ -1,0 +1,14 @@
+# Matches the atlas paper so nothing flashes a different colour while the
+# page loads and nothing dark bleeds around the edges of the iframe.
+[theme]
+base = "light"
+backgroundColor = "#F6F1E7"
+secondaryBackgroundColor = "#EEE6D6"
+primaryColor = "#C8442A"
+textColor = "#171D25"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true

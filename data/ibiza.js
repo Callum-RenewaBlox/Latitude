@@ -1,5 +1,5 @@
 /* ==================================================================
-   ATLAS · Ibiza edition · 2–9 September 2026
+   LATITUDE · Ibiza edition · 2–9 September 2026
    This file is the whole edition: places, lines, route geometry and
    the day-by-day plan. The engine (index.html) is edition-agnostic and
    reads only window.ATLAS. A new trip is a new copy of this file.
@@ -253,7 +253,7 @@ const DAYS = [
 ];
 
 const META = {
-  product:'Atlas', edition:'Ibiza', dates:'2–9 September 2026', season:'September 2026',
+  product:'Latitude', edition:'Ibiza', dates:'2–9 September 2026', season:'September 2026',
   strap:'A week, on one map',
   centre:[38.93,1.35], zoom:11, base:'hotel',
   tilesKey:'cb1_2b01_1_0552a6d00221009dab1f3482'
