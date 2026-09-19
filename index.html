@@ -678,7 +678,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
    is Ibiza. Tokens first, then layout, then the parts.
    ================================================================== */
 :root{
-  --paper:#F6F1E7; --paper2:#EEE6D6; --card:#FFFDF9; --ink:#171D25; --ink2:#3B4553; --mute:#6E7784; --line:#E3DACA;
+  --paper:#F6F1E7; --paper2:#EEE6D6; --card:#FFFDF9; --ink:#171D25; --ink2:#3B4553; --mute:#5A6473; --line:#E3DACA;
   --accent:#C8442A; --accent2:#A5361F; --sea:#0E6F86; --sun:#D98C17; --night:#5D3FA3; --olive:#5F7C43;
   --serif:"Fraunces",Georgia,"Times New Roman",serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
   --r:14px; --shadow:0 12px 34px rgba(23,29,37,.14); --top:60px; --panel:420px; --peek:136px;
@@ -702,8 +702,9 @@ a{color:var(--accent2)}
 
 /* ---------- top bar ---------- */
 .brand{display:flex;align-items:baseline;gap:9px;white-space:nowrap;flex:none}
-.brand .wm{font:600 18px/1 var(--serif);letter-spacing:.12em;color:var(--ink)}
-.brand .ed{font:500 10.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.brand .wm{font:500 18px/1 var(--serif);letter-spacing:.08em;color:var(--ink)}
+.brand .ed{font:500 11.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+.brand .ed b{font-weight:500;color:var(--accent2)}
 .days{display:flex;gap:6px;overflow:auto;flex:1;min-width:0;padding:6px 2px;scrollbar-width:none;-ms-overflow-style:none}
 .days::-webkit-scrollbar{display:none}
 .chip{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:56px;height:40px;padding:0 10px;border-radius:10px;
@@ -736,24 +737,26 @@ a{color:var(--accent2)}
 
 /* the rail: the spine of the product */
 .rail{list-style:none;position:relative;margin-top:8px}
-.rail::before{content:"";position:absolute;left:calc(52px + 16px);top:14px;bottom:14px;width:2px;background:var(--line);border-radius:2px}
+.rail::before{content:"";position:absolute;left:80px;top:14px;bottom:14px;width:2px;background:var(--line);border-radius:2px}
 .leg{position:relative;display:grid;grid-template-columns:52px 34px 1fr;gap:0 12px;padding:10px 8px 10px 0;border-radius:12px;cursor:pointer;transition:background .18s}
 .leg:hover{background:rgba(255,255,255,.55)}
 .leg.on{background:var(--card);box-shadow:0 1px 0 var(--line),0 8px 24px rgba(23,29,37,.08)}
-.leg .lt{font:500 11.5px/1 var(--mono);color:var(--mute);padding-top:9px;text-align:right;letter-spacing:.02em}
+.leg .lt{font:500 13px/1 var(--mono);color:var(--ink);padding-top:9px;text-align:right;letter-spacing:0;font-variant-numeric:tabular-nums}
 .leg.on .lt,.leg.star .lt{color:var(--ink)}
 .leg .lg{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:2px solid var(--lc,#6E7682);color:var(--lc,#6E7682);position:relative;z-index:1;transition:transform .18s}
 .leg.on .lg{background:var(--lc,#6E7682);color:#fff;transform:scale(1.08)}
 .leg .lg svg{width:16px;height:16px;fill:currentColor}
+.leg .lbd{min-width:0}
 .leg .lh{font-weight:600;font-size:14.5px;line-height:1.3;color:var(--ink)}
 .leg.star .lh{font-family:var(--serif);font-weight:500;font-size:17px;letter-spacing:-.005em}
 .leg .lr{color:var(--ink2);font-size:13.5px;line-height:1.5;margin-top:3px}
 .leg .fx{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
-.leg .fx span{font:500 10px/1 var(--mono);letter-spacing:.06em;padding:5px 7px;border-radius:6px;background:var(--paper2);color:var(--ink2)}
+.leg .fx span{font:500 11px/1 var(--mono);letter-spacing:.06em;padding:5px 8px;border-radius:6px;background:var(--paper2);color:var(--ink2)}
 .leg .fx span.hot{background:rgba(200,68,42,.12);color:var(--accent2)}
+.leg .fx span.ok{background:rgba(95,124,67,.14);color:#3F5A2A}
 .leg .alt{margin-top:8px;font-size:12.5px;color:var(--mute);padding-left:12px;border-left:2px dashed var(--line)}
 .leg .lw{font:500 10.5px/1 var(--mono);color:var(--mute);margin-top:7px;letter-spacing:.04em}
-.leg .ln{position:absolute;right:10px;top:12px;font:500 9.5px/1 var(--mono);letter-spacing:.1em;color:#fff;background:var(--lc,#6E7682);padding:4px 6px;border-radius:5px}
+.leg .ln{display:inline-block;margin-left:6px;vertical-align:2px;font:500 10.5px/1 var(--mono);letter-spacing:.08em;color:var(--ink);background:color-mix(in srgb,var(--lc,#6E7682) 26%,var(--card));box-shadow:inset 0 0 0 1.5px var(--lc,#6E7682);padding:4px 6px;border-radius:5px}
 
 /* notes */
 .call{margin-top:14px;padding:13px 14px 13px 16px;border-radius:12px;background:var(--card);border:1px solid var(--line);position:relative}
@@ -765,7 +768,7 @@ a{color:var(--accent2)}
 /* overview */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0 6px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 10px}
-.stat .k{font:500 9.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.stat .k{font:500 10.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
 .stat .v{font:500 24px/1 var(--serif);margin-top:7px}
 .sec{font:500 10.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin:20px 0 10px;display:flex;justify-content:space-between;align-items:center}
 .sec small{letter-spacing:.06em;text-transform:none;color:var(--mute)}
@@ -773,8 +776,9 @@ a{color:var(--accent2)}
 .lnrow{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:start;padding:8px 8px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:background .18s,opacity .18s}
 .lnrow:hover{background:rgba(255,255,255,.6)}
 .lnrow.iso{background:var(--card);border-color:var(--line)}
-.lnrow.off{opacity:.38}
-.lnrow .b{font:500 10px/1 var(--mono);letter-spacing:.08em;color:#fff;padding:7px 0;text-align:center;border-radius:7px}
+.lnrow.off .b{opacity:.38}
+.lnrow.off .n,.lnrow.off .d{color:var(--mute)}
+.lnrow .b{font:500 10.5px/1 var(--mono);letter-spacing:.08em;color:var(--ink);background:color-mix(in srgb,var(--lc) 26%,var(--card));box-shadow:inset 0 0 0 1.5px var(--lc);padding:7px 0;text-align:center;border-radius:7px}
 .lnrow .n{font-weight:600;font-size:13.5px}
 .lnrow .d{font-size:12.5px;color:var(--ink2);line-height:1.4}
 .week{display:flex;flex-direction:column;gap:6px}
@@ -802,7 +806,11 @@ a{color:var(--accent2)}
 .mem .mcap b{color:var(--ink);font-weight:600}
 
 /* pins */
-.pin{background:none;border:0}
+.pin{background:none;border:0;display:grid;place-items:center}
+.far .pin-in{width:12px;height:12px;border-width:2px;box-shadow:0 1px 4px rgba(23,29,37,.25)}
+.far .pin-in svg{display:none}
+.far .pin-base .pin-in{width:22px;height:22px}
+.far .pin-base .pin-in svg{display:block;width:12px;height:12px}
 .pin-in{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--c);border:2.5px solid #fff;box-shadow:0 3px 10px rgba(23,29,37,.28);transition:transform .2s,opacity .2s;will-change:transform}
 .pin-in svg{width:15px;height:15px;fill:#fff}
 .pin-base .pin-in{width:40px;height:40px;border-width:3px}
@@ -821,7 +829,7 @@ a{color:var(--accent2)}
 .leaflet-popup-content{margin:0;width:auto!important;line-height:1.45}
 .leaflet-popup-tip{background:var(--card);border:1px solid var(--line);border-top:0;border-left:0}
 .pop{padding:13px 14px 12px;min-width:200px;max-width:270px}
-.pop .pc{font:500 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--c);display:inline-block;padding:5px 7px;border-radius:6px}
+.pop .pc{font:500 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:color-mix(in srgb,var(--c) 26%,var(--card));box-shadow:inset 0 0 0 1.5px var(--c);display:inline-block;padding:5px 7px;border-radius:6px}
 .pop .pn{font:500 17px/1.2 var(--serif);margin:8px 0 5px}
 .pop .pb{font-size:13px;color:var(--ink2)}
 .pop .pa{font:500 10px/1 var(--mono);letter-spacing:.08em;color:var(--mute);margin-top:8px}
@@ -839,44 +847,50 @@ a{color:var(--accent2)}
 /* intro card */
 #intro{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:var(--paper);cursor:pointer;transition:opacity .6s ease,transform .6s ease}
 #intro.gone{opacity:0;transform:translateY(-3vh);pointer-events:none}
-#intro .in{text-align:center;padding:24px}
-#intro .wm{font:500 clamp(64px,14vw,150px)/1 var(--serif);letter-spacing:.06em;color:var(--ink)}
+#intro .in{text-align:center;padding:24px;max-width:100%}
+#intro .wm{font:500 min(15.5vw,150px)/1 var(--serif);letter-spacing:.08em;color:var(--ink)}
 #intro .lat{font:500 clamp(30px,6.4vw,68px)/1 var(--serif);font-style:italic;color:var(--accent);margin-top:14px;letter-spacing:.02em;font-variant-numeric:tabular-nums}
 #intro .dt{font:500 11px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:22px}
-#intro .go{font:500 10px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:44px;opacity:.7}
+#intro .go{font:500 10px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:44px}
 #intro .rule{width:56px;height:2px;background:var(--accent);margin:26px auto 0;border-radius:2px}
 
 /* lightbox */
-.lb{position:fixed;inset:0;z-index:90;background:rgba(23,29,37,.92);display:grid;grid-template-rows:1fr auto;color:#fff}
-.lb[hidden]{display:none}
-.lb .media{display:grid;place-items:center;padding:56px 20px 10px;min-height:0}
-.lb img,.lb video{max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
-.lb .cap{padding:12px 20px 26px;text-align:center}
-.lb .cap b{font:500 18px/1.2 var(--serif)}
-.lb .cap span{display:block;font:500 10.5px/1 var(--mono);letter-spacing:.12em;color:rgba(255,255,255,.65);margin-top:8px;text-transform:uppercase}
-.lb .x,.lb .pv,.lb .nx{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;font-size:22px}
-.lb .x{top:18px;right:18px;transform:none}.lb .pv{left:14px}.lb .nx{right:14px}
+#lb{position:fixed;inset:0;z-index:90;background:rgba(23,29,37,.92);display:grid;grid-template-rows:1fr auto;color:#fff}
+#lb[hidden]{display:none}
+#lb .media{display:grid;place-items:center;padding:56px 20px 10px;min-height:0}
+#lb img,#lb video{max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+#lb .cap{padding:12px 20px 26px;text-align:center}
+#lb .cap b{font:500 18px/1.2 var(--serif)}
+#lb .cap span{display:block;font:500 10.5px/1 var(--mono);letter-spacing:.12em;color:rgba(255,255,255,.65);margin-top:8px;text-transform:uppercase}
+#lb .x,#lb .pv,#lb .nx{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;font-size:22px}
+#lb .x{top:18px;right:18px;transform:none}#lb .pv{left:14px}#lb .nx{right:14px}
 
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.mem-open{display:grid;grid-template-columns:52px 1fr;gap:12px;width:100%;text-align:left;padding:0;border-radius:12px}
+.pop .pm button{padding:0;border-radius:8px;overflow:hidden;line-height:0}
 .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:95;background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px;font:500 12px/1 var(--mono);letter-spacing:.06em;box-shadow:var(--shadow)}
 .toast[hidden]{display:none}
 
 /* ---------- mobile: full-bleed map + bottom sheet ---------- */
 @media (max-width:899px){
   :root{--top:96px}
-  .top{flex-wrap:wrap;height:var(--top);padding:8px 12px 0;gap:6px 10px;align-content:start}
+  .top{flex-wrap:wrap;height:auto;padding:8px 12px 0;gap:6px 10px;align-content:start}
   .brand{order:1}.ctl{order:2;margin-left:auto}.days{order:3;flex-basis:100%;padding:2px 0 6px}
   .seg button{padding:0 9px}
   #map{left:0}
-  .sheet{top:auto;left:0;right:0;width:auto;height:92vh;height:92dvh;border-right:0;border-top:1px solid var(--line);border-radius:18px 18px 0 0;box-shadow:0 -12px 40px rgba(23,29,37,.16);
+  .sheet{top:auto;left:0;right:0;width:auto;height:calc(100vh - var(--top));height:calc(100dvh - var(--top));border-right:0;border-top:1px solid var(--line);border-radius:18px 18px 0 0;box-shadow:0 -12px 40px rgba(23,29,37,.16);
     transform:translateY(var(--sy,calc(100% - var(--peek))));transition:transform .32s cubic-bezier(.2,.8,.2,1)}
   .sheet.drag{transition:none}
-  .grab{display:block;flex:none;height:26px;position:relative;cursor:grab;touch-action:none}
-  .grab::before{content:"";position:absolute;left:50%;top:10px;width:44px;height:5px;border-radius:3px;background:var(--line);transform:translateX(-50%)}
+  .grab{display:block;flex:none;height:44px;position:relative;cursor:grab;touch-action:none}
+  .grab::before{content:"";position:absolute;left:50%;top:19px;width:44px;height:5px;border-radius:3px;background:var(--line);transform:translateX(-50%)}
   .sheet-in{padding:6px 18px 60px}
+  .sheet:not(.full) .sheet-in{overflow:hidden}
+  .chip{height:44px;min-width:60px} .seg button{height:40px;min-width:44px;padding:0 10px} .ib{width:44px;height:44px}
+  .mapctl button{width:44px;height:44px} .mapctl{gap:10px}
   .title{font-size:26px}
   .stats{grid-template-columns:repeat(4,1fr)}
-  .mapctl{bottom:calc(var(--peek) + 14px)}
-  .leaflet-bottom{bottom:var(--peek)}
+  .mapctl{bottom:calc(var(--sv,var(--peek)) + 14px);transition:bottom .32s cubic-bezier(.2,.8,.2,1)}
+  .leaflet-bottom{bottom:var(--sv,var(--peek))}
 }
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
@@ -912,7 +926,8 @@ a{color:var(--accent2)}
   </div>
 </header>
 
-<div id="map" aria-label="Map"></div>
+<div id="map" role="region" aria-label="Map"></div>
+<div id="live" role="status" aria-live="polite" class="sr"></div>
 <div class="mapctl" id="mapctl">
   <button id="zin" aria-label="Zoom in">+</button>
   <button id="zout" aria-label="Zoom out">−</button>
@@ -948,16 +963,16 @@ if(!A){ document.body.innerHTML='<p style="padding:2rem;font-family:system-ui">N
 const {meta:META, ROUTES, LINE, P, DAYS} = A; const MEM = A.memories || [];
 const $ = s=>document.querySelector(s), $$ = s=>[...document.querySelectorAll(s)];
 const esc = s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const ll = id=>[P[id][2],P[id][3]];
+const ll = id=>{ const p=P[id]; if(!p){ console.warn('[latitude] unknown place id', id); return null; } return [p[2],p[3]]; };
 const rad = d=>d*Math.PI/180;
 const hav = (a,b)=>{const dLat=rad(b[0]-a[0]),dLon=rad(b[1]-a[1]);const s=Math.sin(dLat/2)**2+Math.cos(rad(a[0]))*Math.cos(rad(b[0]))*Math.sin(dLon/2)**2;return 2*6371000*Math.asin(Math.sqrt(s));};
-const walkTxt = (a,b)=>{const m=hav(ll(a),ll(b));return (m<950?Math.round(m/10)*10+' m':(m/1000).toFixed(1)+' km')+' · '+Math.max(1,Math.round(m/80))+' min on foot';};
+const walkTxt = (a,b)=>{const A_=ll(a),B_=ll(b); if(!A_||!B_) return ''; const m=hav(A_,B_);return (m<950?Math.round(m/10)*10+' m':(m/1000).toFixed(1)+' km')+' · '+Math.max(1,Math.round(m/80))+' min on foot';};
 const mobile = ()=>window.matchMedia('(max-width:899px)').matches;
 const reduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
 
 /* ---------- vocab ---------- */
-const CAT = {base:{l:'Base camp',c:'#C8442A'},beach:{l:'Beach',c:'#1F86A8'},night:{l:'Night',c:'#5D3FA3'},eat:{l:'Food & drink',c:'#D98C17'},
-  stop:{l:'Bus stop',c:'#3B4553'},port:{l:'Boat / ferry',c:'#1B4F72'},air:{l:'Airport',c:'#5F7C43'},sight:{l:'Sight',c:'#2AA198'},town:{l:'Old town',c:'#B23A8F'},taxi:{l:'Taxi rank',c:'#171D25'}};
+const CAT = {base:{l:'Base camp',c:'#C8442A'},beach:{l:'Beach',c:'#19758F'},night:{l:'Night',c:'#5D3FA3'},eat:{l:'Food & drink',c:'#A8660A'},
+  stop:{l:'Bus stop',c:'#3B4553'},port:{l:'Boat / ferry',c:'#1B4F72'},air:{l:'Airport',c:'#5F7C43'},sight:{l:'Sight',c:'#1B7F76'},town:{l:'Old town',c:'#B23A8F'},taxi:{l:'Taxi rank',c:'#171D25'}};
 const ICON = {
   base:'<path d="M12 3 2 12h3v8h6v-6h2v6h6v-8h3z"/>',
   beach:'<path d="M3 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0v3H3zM12 3a6 6 0 0 1 6 6h-2a4 4 0 0 0-8 0H6a6 6 0 0 1 6-6zm-1 6h2v6h-2z"/>',
@@ -978,7 +993,7 @@ const MODE = {
   taxi:ICON.taxi, plane:ICON.air
 };
 const MODECOL = {walk:'#6E7682',taxi:'#171D25',plane:'#5F7C43',boat:'#3D8DA1',ferry:'#1B4F72',bus:'#3B4553'};
-const R2L = {AERO1:'AERO1',T1D1:'T1',D3:'D3',P4:'P4',P5:'P5',P7:'P7',P2:'P2',L3:'L3',FERRY:'FERRY',BOAT_SALADA:'BOAT',BOAT_BASSA:'BOAT',TX_ST_HOTEL:'TAXI',TX_HOTEL_CKW:'TAXI',TX_AIR_HOTEL:'TAXI'};
+const R2L = META.routeLines || {};
 const LEGEND = ['AERO1','T1','D1','D3','P4','P5','P7','P2','L3','FERRY','BOAT','TAXI'].filter(k=>LINE[k]);
 const DAYNAME = {d02:'Wednesday',d03:'Thursday',d04:'Friday',d05:'Saturday',d06:'Sunday',d07:'Monday',d08:'Tuesday',d09:'Wednesday'};
 const legColour = lg => (lg.line && LINE[lg.line]) ? LINE[lg.line].c : (MODECOL[lg.mode]||'#6E7682');
@@ -990,12 +1005,12 @@ const fmtLat = v => { const abs=Math.abs(v); let d=Math.floor(abs), m=Math.round
 const baseLL = (META.base && P[META.base]) ? [P[META.base][2],P[META.base][3]] : (META.centre||[0,0]);
 const LAT = META.latitude || fmtLat(baseLL[0]);
 const PRODUCT = (META.product||'Latitude');
-$('#wm').textContent = PRODUCT.toUpperCase(); $('#ed').textContent = LAT+' · '+(META.edition||'');
+$('#wm').textContent = PRODUCT.toUpperCase(); $('#ed').innerHTML = '<b>'+esc(LAT)+'</b> · '+esc(META.edition||'');
 $('#i-wm').textContent = PRODUCT.toUpperCase(); $('#i-lat').textContent = LAT; $('#i-dt').textContent = (META.edition||'')+' · '+(META.dates||'');
 document.title = PRODUCT+' · '+(META.edition||'')+' · '+(META.dates||'');
 
 /* ---------- map ---------- */
-const map = L.map('map',{zoomControl:false,attributionControl:false,renderer:L.svg(),tap:true,zoomSnap:.25}).setView(META.centre||[0,0], META.zoom||11);
+const map = L.map('map',{zoomControl:false,attributionControl:false,renderer:L.svg(),tap:true,zoomSnap:.25,zoomAnimation:!reduced,fadeAnimation:!reduced,markerZoomAnimation:!reduced}).setView(META.centre||[0,0], META.zoom||11);
 L.control.attribution({position:'bottomright',prefix:false}).addTo(map);
 const K = META.tilesKey?('?key='+META.tilesKey):'';
 const ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>';
@@ -1003,14 +1018,17 @@ const tLight = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyage
 const tDark  = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'+K,{maxZoom:19,subdomains:'abcd',attribution:ATTR});
 tLight.addTo(map);
 const gRoute = L.layerGroup().addTo(map), gMark = L.layerGroup().addTo(map), gMem = L.layerGroup().addTo(map);
-$('#zin').onclick = ()=>map.zoomIn(); $('#zout').onclick = ()=>map.zoomOut();
+$('#zin').onclick = ()=>map.zoomIn(1,{animate:!reduced}); $('#zout').onclick = ()=>map.zoomOut(1,{animate:!reduced});
+// 1: at island zoom 78 icon pins overlap into a blob; far out they become dots and only base camp keeps its icon
+const far = ()=>document.getElementById('map').classList.toggle('far', map.getZoom() < 12.5); map.on('zoomend', far); far();
 
 /* ---------- markers, built once ---------- */
 const MK = {};
 for(const id in P){
   const [name,cat,lat,lon] = P[id]; const c = CAT[cat]||CAT.sight;
   const html = `<span class="pin-in" style="--c:${c.c}"><svg viewBox="0 0 24 24" aria-hidden="true">${ICON[cat]||ICON.sight}</svg></span>`;
-  const m = L.marker([lat,lon],{icon:L.divIcon({className:'pin pin-'+cat,html,iconSize:[32,32],iconAnchor:[16,16],popupAnchor:[0,-16]}),keyboard:false,title:name,riseOnHover:true});
+  const m = L.marker([lat,lon],{icon:L.divIcon({className:'pin pin-'+cat,html,iconSize:[44,44],iconAnchor:[22,22],popupAnchor:[0,-22]}),keyboard:true,title:name,riseOnHover:true});
+  m.on('add',()=>{ const el=m.getElement(); if(el){ el.setAttribute('aria-label', c.l+': '+name); el.removeAttribute('title'); } });
   m.bindPopup(()=>popupHTML(id),{className:'pop-w',closeButton:false,maxWidth:290,offset:[0,-2]});
   MK[id]=m;
 }
@@ -1019,9 +1037,9 @@ function popupHTML(id){
   const mem = MEM.filter(x=>x.place===id);
   return `<div class="pop" style="--c:${c.c}"><span class="pc">${esc(c.l)}</span><div class="pn">${esc(name)}</div>`+
     (note?`<div class="pb">${esc(note)}</div>`:'')+(area?`<div class="pa">${esc(area)}</div>`:'')+
-    (mem.length?`<div class="pm">${mem.slice(0,4).map(x=>`<img src="${esc(x.thumb||x.src)}" alt="" data-mem="${esc(x.id)}">`).join('')}</div>`:'')+`</div>`;
+    (mem.length?`<div class="pm">${mem.slice(0,4).map(x=>`<button type="button" data-mem="${esc(x.id)}" data-place="${esc(id)}" aria-label="Open ${esc(x.caption||name)}"><img src="${esc(x.thumb||x.src)}" alt=""></button>`).join('')}</div>`:'')+`</div>`;
 }
-map.on('popupopen',e=>{ e.popup.getElement().querySelectorAll('[data-mem]').forEach(im=>im.onclick=()=>openLB(im.dataset.mem)); });
+map.on('popupopen',e=>{ e.popup.getElement().querySelectorAll('[data-mem]').forEach(b=>b.onclick=()=>openLB(b.dataset.mem, MEM.filter(x=>x.place===b.dataset.place))); });
 
 /* ---------- state ---------- */
 const state = {day:'ov', phase:'all', mode:'plan', activeLeg:null, iso:null, sheet:'half'};
@@ -1039,8 +1057,10 @@ const drawn = []; // [{layer, leg, alt, line}]
 function addLine(latlngs, style, meta){
   const pl = L.polyline(latlngs, style).addTo(gRoute);
   drawn.push(Object.assign({layer:pl}, meta));
-  if(!reduced && !style.dashArray){ const p = pl._path; if(p && p.getTotalLength){ const len = p.getTotalLength(); p.style.strokeDasharray = len; p.style.strokeDashoffset = len; p.getBoundingClientRect(); p.style.transition='stroke-dashoffset .9s ease'; p.style.strokeDashoffset = 0;
-    p.addEventListener('transitionend',()=>{p.style.strokeDasharray='';p.style.strokeDashoffset='';p.style.transition='';},{once:true}); } }
+  if(!reduced && !document.hidden && !style.dashArray){ const p = pl._path; if(p && p.getTotalLength){ const len = p.getTotalLength(); p.style.strokeDasharray = len; p.style.strokeDashoffset = len; p.getBoundingClientRect(); p.style.transition='stroke-dashoffset .9s ease'; p.style.strokeDashoffset = 0;
+    // a transition that never starts or gets cancelled (hidden tab, reparent, zoom) would leave the line cut short forever
+    const done=()=>{ p.style.strokeDasharray=''; p.style.strokeDashoffset=''; p.style.transition=''; };
+    p.addEventListener('transitionend',done,{once:true}); p.addEventListener('transitioncancel',done,{once:true}); setTimeout(done,1000); } }
   return pl;
 }
 function clearRoutes(){ gRoute.clearLayers(); drawn.length=0; }
@@ -1049,7 +1069,7 @@ function drawDay(d){
   visibleLegs(d).forEach((lg,i)=>{
     if(lg.altgeom) addLine(lg.altgeom, lineStyle(lg.line||'TAXI', true), {leg:i, alt:true});
     if(lg.geom) addLine(lg.geom, lineStyle(lg.line||modeLine(lg.mode)), {leg:i});
-    else if(lg.mode==='walk' && lg.from!==lg.to) addLine([ll(lg.from),ll(lg.to)], lineStyle('WALK'), {leg:i});
+    else if(lg.mode==='walk' && lg.from!==lg.to && ll(lg.from) && ll(lg.to)) addLine([ll(lg.from),ll(lg.to)], lineStyle('WALK'), {leg:i});
   });
 }
 const modeLine = m => ({taxi:'TAXI',walk:'WALK',ferry:'FERRY',boat:'BOAT'})[m]||'WALK';
@@ -1059,7 +1079,8 @@ function drawOverview(){
   applyIso();
 }
 function applyIso(){
-  drawn.forEach(d=>{ const on = !state.iso || d.line===state.iso || (state.iso==='D1'&&d.line==='T1') ; d.layer.setStyle({opacity:on?.95:.1, weight:on?(state.iso?5.5:4.5):3}); if(on) d.layer.bringToFront(); });
+  drawn.forEach(d=>{ const alias = !!state.iso && LINE[state.iso] && LINE[state.iso].shares===d.line; const on = !state.iso || d.line===state.iso || alias;
+    d.layer.setStyle({color: alias?LINE[state.iso].c:(LINE[d.line]||LINE.WALK).c, opacity:on?.95:.1, weight:on?(state.iso?5.5:4.5):3}); if(on && state.iso) d.layer.bringToFront(); });
   $$('.lnrow').forEach(r=>{ r.classList.toggle('iso', r.dataset.line===state.iso); r.classList.toggle('off', !!state.iso && r.dataset.line!==state.iso); });
 }
 function applyActive(){
@@ -1067,7 +1088,7 @@ function applyActive(){
   drawn.forEach(d=>{ const on = i==null || d.leg===i; d.layer.setStyle({opacity:on?(d.alt?.5:.95):.14, weight:on?(i!=null&&!d.alt?6:d.alt?3:4.5):3}); if(on&&i!=null) d.layer.bringToFront(); });
   $$('.leg').forEach(el=>el.classList.toggle('on', +el.dataset.i===i));
   Object.values(MK).forEach(m=>{const el=m.getElement(); if(el) el.classList.remove('hot');});
-  if(i!=null){ const lg = visibleLegs(dayById(state.day))[i]; [lg.from,lg.to].forEach(id=>{const el=MK[id]&&MK[id].getElement(); if(el) el.classList.add('hot');}); }
+  if(i!=null){ const lg = visibleLegs(dayById(state.day))[i]; if(lg) [lg.from,lg.to].forEach(id=>{const el=MK[id]&&MK[id].getElement(); if(el) el.classList.add('hot');}); }
 }
 
 /* ---------- markers per view ---------- */
@@ -1076,7 +1097,7 @@ function showMarkers(ids, dimOthers){
   const set = new Set(ids);
   Object.keys(P).forEach(id=>{
     if(!set.has(id) && !dimOthers) return;
-    const m = MK[id].addTo(gMark); const el = m.getElement(); if(el) el.classList.toggle('dim', !set.has(id));
+    const m = MK[id].addTo(gMark); const el = m.getElement(); if(el){ el.classList.toggle('dim', !set.has(id)); el.tabIndex = set.has(id) ? 0 : -1; }
   });
 }
 
@@ -1087,7 +1108,9 @@ function fitTo(points, opts){
   if(!points.length) return;
   const b = L.latLngBounds(points);
   if(!b.isValid()) return;
-  const pad = mobile() ? {paddingTopLeft:[24,110], paddingBottomRight:[24, 150]} : {padding:[48,48]};
+  const topH = mobile() ? ($('.top').offsetHeight + 14) : 48;
+  const sv = mobile() ? Math.min(parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sv'))||136, window.innerHeight*0.5) : 0;
+  const pad = mobile() ? {paddingTopLeft:[24, topH], paddingBottomRight:[24, sv + 20]} : {padding:[48,48]};
   // Every Leaflet fit divides by the container size. A container that has not
   // been laid out yet (an opening pane, an iframe, a phone mid-rotation) is 0x0
   // and yields a NaN centre - so with no size we do not fit at all: the bounds
@@ -1118,14 +1141,15 @@ function renderDay(d){
   const head = `<div class="hd"><div class="eyebrow">${esc(d.eyebrow)}</div><h2 class="title">${d.title}</h2><p class="lede">${esc(d.lede)}</p>
     <div class="hdrow">${d.sunset?`<span class="tag sun">☼ sunset ${esc(d.sunset)}</span>`:''}<span class="tag">${legs.length} stops</span>${stars?`<span class="tag">${stars} big ${stars>1?'nights':'night'}</span>`:''}</div></div>`;
   if(state.mode==='memory') return head + renderMemory(d);
+  if(!legs.length && state.phase!=='all'){ const other = state.phase==='day' ? 'after dark — tap ☾ or ALL' : 'in daylight — tap ☀ or ALL';
+    return head + `<div class="empty"><h3>Nothing ${state.phase==='day'?'in daylight':'after dark'} on this day</h3><p>Everything on this day happens ${esc(other)}.</p></div>`; }
   const rail = `<ol class="rail">`+legs.map((lg,i)=>{
     const col = legColour(lg); const star = /^★/.test(lg.h);
-    const fx = (lg.fx||[]).map(f=>`<span class="${/last|✓|free|booked/i.test(f)?'hot':''}">${esc(f)}</span>`).join('');
-    const lw = (lg.mode==='walk' && lg.from!==lg.to && P[lg.from] && P[lg.to]) ? `<div class="lw">${esc(walkTxt(lg.from,lg.to))}</div>` : '';
+    const fx = (lg.fx||[]).map(f=>{ const cls = /last|⚠|^no (facilities|cloakroom|re-entry)/i.test(f) ? 'hot' : /✓|free|booked/i.test(f) ? 'ok' : ''; return `<span class="${cls}">${esc(f)}</span>`; }).join('');
+    const lw = (lg.mode==='walk' && lg.from!==lg.to && P[lg.from] && P[lg.to] && !(lg.fx||[]).some(f=>/\bmin\b/.test(f))) ? `<div class="lw">${esc(walkTxt(lg.from,lg.to))}</div>` : '';
     return `<li class="leg mode-${lg.mode}${star?' star':''}" data-i="${i}" style="--lc:${col}" tabindex="0">
       <div class="lt">${esc(lg.t)}</div><div class="lg"><svg viewBox="0 0 24 24" aria-hidden="true">${MODE[lg.mode]||MODE.walk}</svg></div>
-      <div class="lb"><div class="lh">${esc(lg.h.replace(/^★\s*/,''))}</div>${lg.r?`<div class="lr">${esc(lg.r)}</div>`:''}${fx?`<div class="fx">${fx}</div>`:''}${lg.alt?`<div class="alt">${esc(lg.alt)}</div>`:''}${lw}</div>
-      ${lg.line&&LINE[lg.line]&&lg.line!=='WALK'?`<span class="ln">${esc(LINE[lg.line].n)}</span>`:''}</li>`;
+      <div class="lbd"><div class="lh">${esc(lg.h.replace(/^★\s*/,''))}${lg.line&&LINE[lg.line]&&lg.line!=='WALK'?` <span class="ln">${esc(LINE[lg.line].n)}</span>`:''}</div>${lg.r?`<div class="lr">${esc(lg.r)}</div>`:''}${fx?`<div class="fx">${fx}</div>`:''}${lg.alt?`<div class="alt">${esc(lg.alt)}</div>`:''}${lw}</div></li>`;
   }).join('')+`</ol>`;
   const calls = (d.calls||[]).map(c=>`<div class="call ${esc(c.k||'')}"><div class="ct">${esc(c.t)}</div><p>${esc(c.b)}</p></div>`).join('');
   return head + rail + (calls?`<div class="hr"></div>${calls}`:'');
@@ -1139,7 +1163,7 @@ function renderOverview(d){
   if(state.mode==='memory') return head + renderMemory(d);
   const stats = `<div class="stats"><div class="stat"><div class="k">Nights</div><div class="v">${nights}</div></div><div class="stat"><div class="k">Places</div><div class="v">${Object.keys(P).length}</div></div><div class="stat"><div class="k">Lines</div><div class="v">${LEGEND.length}</div></div><div class="stat"><div class="k">★ Moments</div><div class="v">${stars}</div></div></div>`;
   const week = `<div class="sec">The week <small>tap a day</small></div><div class="week">`+DAYS.filter(x=>x.id!=='ov').map(x=>`<button class="wrow" data-day="${x.id}"><span class="wc">${esc(x.chip)}<b>${esc(x.b)}</b></span><span class="wt">${x.title}</span><span class="ws">${x.sunset?'☼ '+esc(x.sunset):''}</span></button>`).join('')+`</div>`;
-  const lines = `<div class="sec">Lines on the map <small>tap to isolate</small></div><div class="lines">`+LEGEND.map(k=>`<div class="lnrow" data-line="${k}" role="button" tabindex="0"><span class="b" style="background:${LINE[k].c}">${esc(LINE[k].n)}</span><div><div class="n">${esc(LINE[k].d.split(' · ')[0])}</div>${LINE[k].d.includes(' · ')?`<div class="d">${esc(LINE[k].d.split(' · ').slice(1).join(' · '))}</div>`:''}</div></div>`).join('')+`</div>`;
+  const lines = `<div class="sec">Lines on the map <small>tap to isolate</small></div><div class="lines">`+LEGEND.map(k=>`<div class="lnrow" data-line="${k}" role="button" tabindex="0"><span class="b" style="--lc:${LINE[k].c}">${esc(LINE[k].n)}</span><div><div class="n">${esc(LINE[k].d.split(' · ')[0])}</div>${LINE[k].d.includes(' · ')?`<div class="d">${esc(LINE[k].d.split(' · ').slice(1).join(' · '))}</div>`:''}</div></div>`).join('')+`</div>`;
   return head + stats + week + lines;
 }
 
@@ -1151,23 +1175,24 @@ function renderMemory(d){
     const when = d.id==='ov' ? 'When the week is over, the photographs from it will pin themselves to this map — where they were taken, in the order they happened.' : `Nothing here yet. Photographs from ${DAYNAME[d.id]||'this day'} will land on this page at the moment they were taken, and on the map where they were taken.`;
     return `<div class="empty"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><h3>The memory of it</h3><p>${esc(when)}</p><div class="ph-strip"><i></i><i></i><i></i></div></div>`;
   }
-  return `<ol class="mrail">`+items.map(m=>`<li class="mem" data-mem="${esc(m.id)}"><div class="mt">${esc(fmtT(m.ts))}</div><div class="mc">${m.type==='video'?`<video src="${esc(m.src)}" muted playsinline preload="metadata"></video>`:`<img src="${esc(m.thumb||m.src)}" alt="${esc(m.caption||'')}" loading="lazy">`}<div class="mcap">${m.place&&P[m.place]?`<b>${esc(P[m.place][0])}</b> · `:''}${esc(m.caption||'')}</div></div></li>`).join('')+`</ol>`;
+  return `<ol class="mrail">`+items.map(m=>`<li class="mem"><button type="button" class="mem-open" data-mem="${esc(m.id)}" aria-label="Open ${esc(m.caption||(m.place&&P[m.place]?P[m.place][0]:'photo'))}"><div class="mt">${esc(fmtT(m.ts))}</div><div class="mc">${m.type==='video'?`<video src="${esc(m.src)}" muted playsinline preload="metadata" tabindex="-1"></video>`:`<img src="${esc(m.thumb||m.src)}" alt="${esc(m.caption||'')}" loading="lazy">`}<div class="mcap">${m.place&&P[m.place]?`<b>${esc(P[m.place][0])}</b> · `:''}${esc(m.caption||'')}</div></div></button></li>`).join('')+`</ol>`;
 }
 const fmtT = ts=>{ const m = String(ts).match(/T(\d\d:\d\d)/); return m?m[1]:''; };
 function showMemoryPins(d){
   gMem.clearLayers();
   if(state.mode!=='memory') return;
   memFor(d).forEach(m=>{ const lat = m.lat ?? (m.place&&P[m.place]?P[m.place][2]:null), lng = m.lng ?? (m.place&&P[m.place]?P[m.place][3]:null); if(lat==null) return;
-    const mk = L.marker([lat,lng],{icon:L.divIcon({className:'pin mem',html:`<span class="pin-in" style="background-image:url('${esc(m.thumb||m.src)}')"></span>`,iconSize:[44,44],iconAnchor:[22,22]}),keyboard:false});
+    const thumb = m.thumb || (m.type==='video' ? '' : m.src);
+    const mk = L.marker([lat,lng],{icon:L.divIcon({className:'pin mem',html:`<span class="pin-in" style="${thumb?`background-image:url('${esc(thumb)}')`:'display:grid;place-items:center;color:#fff;font-size:18px'}">${thumb?'':'▶'}</span>`,iconSize:[44,44],iconAnchor:[22,22]}),keyboard:true,title:m.caption||'photo'});
     mk.on('click',()=>openLB(m.id)); mk.addTo(gMem); });
 }
 /* lightbox */
-let lbList = [], lbI = 0;
-function openLB(id){ lbList = memFor(dayById(state.day)); lbI = Math.max(0, lbList.findIndex(x=>x.id===id)); showLB(); }
-function showLB(){ const m = lbList[lbI]; if(!m) return; const lb=$('#lb'); lb.hidden=false;
+let lbList = [], lbI = 0, lbReturn = null;
+function openLB(id, list){ lbList = (list && list.length) ? list : memFor(dayById(state.day)); if(!lbList.some(x=>x.id===id)) lbList = memFor({id:'ov'}); lbI = Math.max(0, lbList.findIndex(x=>x.id===id)); lbReturn = document.activeElement; showLB(); }
+function showLB(){ const m = lbList[lbI]; if(!m) return; const lb=$('#lb'); lb.hidden=false; setTimeout(()=>$('#lb-x').focus(),0);
   $('#lb-media').innerHTML = m.type==='video'?`<video src="${esc(m.src)}" controls autoplay playsinline></video>`:`<img src="${esc(m.src)}" alt="${esc(m.caption||'')}">`;
   $('#lb-cap').innerHTML = `<b>${esc(m.caption||(m.place&&P[m.place]?P[m.place][0]:''))}</b><span>${esc((m.place&&P[m.place]?P[m.place][0]+' · ':'')+(DAYNAME[m.day]||'')+(fmtT(m.ts)?' · '+fmtT(m.ts):''))}</span>`; }
-function closeLB(){ $('#lb').hidden=true; $('#lb-media').innerHTML=''; }
+function closeLB(){ $('#lb').hidden=true; $('#lb-media').innerHTML=''; if(lbReturn && lbReturn.focus){ try{ lbReturn.focus(); }catch(e){} } lbReturn=null; }
 $('#lb-x').onclick=closeLB; $('#lb-pv').onclick=()=>{lbI=(lbI-1+lbList.length)%lbList.length;showLB();}; $('#lb-nx').onclick=()=>{lbI=(lbI+1)%lbList.length;showLB();};
 $('#lb').addEventListener('click',e=>{ if(e.target===e.currentTarget||e.target.id==='lb-media') closeLB(); });
 
@@ -1190,23 +1215,25 @@ function render(){
     if(state.phase!=='all'){ ids.clear(); legs.forEach(l=>{ids.add(l.from);ids.add(l.to);}); ids.add(META.base); }
     showMarkers([...ids], true);
     drawDay(d);
-    const pts = []; legs.forEach(l=>{ if(l.geom) pts.push(...l.geom); pts.push(ll(l.from), ll(l.to)); });
+    const pts = []; legs.forEach(l=>{ if(l.geom) pts.push(...l.geom); [ll(l.from),ll(l.to)].forEach(p=>{ if(p) pts.push(p); }); });
     fitTo(pts);
   }
   showMemoryPins(d);
   wirePanel();
+  const tt = panel.querySelector('.title'); if(tt){ tt.tabIndex = -1; tt.focus({preventScroll:true}); }
+  const live = $('#live'); if(live) live.textContent = (d.eyebrow||'').replace(/<[^>]+>/g,'');
   try{ history.replaceState(null,'','#'+d.id); }catch(e){}
   if(mobile()) setSheet(state.sheet==='full'?'full':'half');
 }
 function wirePanel(){
   $$('.leg').forEach(el=>{
     const i=+el.dataset.i;
-    const act=()=>{ state.activeLeg = state.activeLeg===i?null:i; applyActive(); if(state.activeLeg!=null){ const lg=visibleLegs(dayById(state.day))[i]; const pts = lg.geom?lg.geom.slice():[ll(lg.from),ll(lg.to)]; fitTo(pts,{maxZoom:16}); } };
+    const act=()=>{ state.activeLeg = state.activeLeg===i?null:i; applyActive(); if(state.activeLeg!=null){ const lg=visibleLegs(dayById(state.day))[i]; if(!lg) return; const pts = lg.geom?lg.geom.slice():[ll(lg.from),ll(lg.to)].filter(Boolean); fitTo(pts,{maxZoom:16}); } };
     el.addEventListener('click',act); el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();act();}});
   });
   $$('.wrow').forEach(b=>b.onclick=()=>go(b.dataset.day));
   $$('.lnrow').forEach(r=>{ const act=()=>{ state.iso = state.iso===r.dataset.line?null:r.dataset.line; applyIso(); }; r.onclick=act; r.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();act();}}; });
-  $$('.mem').forEach(el=>el.onclick=()=>openLB(el.dataset.mem));
+  $$('.mem-open').forEach(el=>el.onclick=()=>openLB(el.dataset.mem));
 }
 function go(id){ if(!dayById(id)) return; state.day=id; state.iso=null; render(); }
 
@@ -1226,16 +1253,17 @@ function shareUrl(){
 }
 $('#share').onclick = async ()=>{ const url = shareUrl(); const title = document.title;
   try{ if(navigator.share){ await navigator.share({title,url}); return; } }catch(e){ if(e&&e.name==='AbortError') return; }
-  try{ await navigator.clipboard.writeText(url); toast('Link copied'); }catch(e){ toast(url); } };
+  try{ await navigator.clipboard.writeText(url); toast('Link copied'); }catch(e){ try{ window.prompt('Copy this link', url); }catch(_){ toast(url, 8000); } } };
 let meMk=null;
 $('#loc').onclick = ()=>{ if(!navigator.geolocation){ toast('No location on this device'); return; } toast('Finding you…');
   map.locate({setView:false,enableHighAccuracy:true,timeout:9000}); };
-map.on('locationfound',e=>{ if(meMk) meMk.remove(); meMk = L.marker(e.latlng,{icon:L.divIcon({className:'pin me',html:'<span class="pin-in"></span>',iconSize:[16,16],iconAnchor:[8,8]}),keyboard:false,zIndexOffset:1000}).addTo(map); map.flyTo(e.latlng, Math.max(map.getZoom(),14)); toast('You are here'); });
-map.on('locationerror',()=>toast('Could not get your location'));
-let toastT; function toast(msg){ const t=$('#toast'); t.textContent=msg; t.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>t.hidden=true,2200); }
+map.on('locationfound',e=>{ if(meMk) meMk.remove(); meMk = L.marker(e.latlng,{icon:L.divIcon({className:'pin me',html:'<span class="pin-in"></span>',iconSize:[16,16],iconAnchor:[8,8]}),keyboard:false,zIndexOffset:1000}).addTo(map); const z=Math.max(map.getZoom(),14); if(reduced) map.setView(e.latlng, z, {animate:false}); else map.flyTo(e.latlng, z); toast('You are here'); });
+map.on('locationerror',e=>toast(e && e.code===1 ? 'Location is off for this site — allow it in your browser settings' : e && e.code===3 ? 'No fix yet — try again in the open' : 'Could not get your location', 5000));
+let toastT; function toast(msg, ms){ const t=$('#toast'); t.textContent=msg; t.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>t.hidden=true, ms||2200); }
 document.addEventListener('keydown',e=>{
   if(!$('#lb').hidden){ if(e.key==='Escape') closeLB(); if(e.key==='ArrowLeft') $('#lb-pv').click(); if(e.key==='ArrowRight') $('#lb-nx').click(); return; }
   if(e.target.matches('input,textarea')) return;
+  if(!(e.target===document.body || e.target.closest('.days,.title'))) return;   // arrows change the day only from the page or the day strip
   const i = DAYS.findIndex(d=>d.id===state.day);
   if(e.key==='ArrowRight' && i<DAYS.length-1) go(DAYS[i+1].id);
   if(e.key==='ArrowLeft' && i>0) go(DAYS[i-1].id);
@@ -1244,17 +1272,25 @@ document.addEventListener('keydown',e=>{
 window.addEventListener('hashchange',()=>{ const id=location.hash.slice(1); if(dayById(id) && id!==state.day) go(id); });
 
 /* ---------- mobile sheet ---------- */
-const sheet = $('#sheet'), grab = $('#grab');
-const SNAP = {peek:()=>window.innerHeight*0.92 - 136, half:()=>window.innerHeight*0.92*0.5, full:()=>0};
-function setSheet(pos){ state.sheet=pos; sheet.style.setProperty('--sy', SNAP[pos]()+'px'); }
-let dragY=null, startY=0, startOff=0;
-grab.addEventListener('pointerdown',e=>{ dragY=e.clientY; startY=e.clientY; startOff=SNAP[state.sheet](); sheet.classList.add('drag'); grab.setPointerCapture(e.pointerId); });
-grab.addEventListener('pointermove',e=>{ if(dragY==null) return; const off = Math.max(0, Math.min(SNAP.peek(), startOff + (e.clientY-startY))); sheet.style.setProperty('--sy', off+'px'); });
-const endDrag = e=>{ if(dragY==null) return; sheet.classList.remove('drag'); const dy = e.clientY-startY; dragY=null;
-  if(Math.abs(dy)<8){ setSheet(state.sheet==='peek'?'half':state.sheet==='half'?'full':'peek'); return; }
-  const off = startOff+dy; const cands = ['peek','half','full']; let best=cands[0], bd=1e9; cands.forEach(c=>{const d=Math.abs(SNAP[c]()-off); if(d<bd){bd=d;best=c;}}); setSheet(best); };
-grab.addEventListener('pointerup',endDrag); grab.addEventListener('pointercancel',endDrag);
-window.addEventListener('resize',()=>{ if(mobile()) setSheet(state.sheet); else sheet.style.removeProperty('--sy'); map.invalidateSize(); });
+const sheet = $('#sheet'), grab = $('#grab'), sheetIn = $('#panel');
+// the header sizes itself on a phone (three rows), so the layout reads its real height
+const syncTop = ()=>{ if(mobile()) document.documentElement.style.setProperty('--top', $('.top').offsetHeight+'px'); else document.documentElement.style.removeProperty('--top'); map.invalidateSize({animate:false}); };
+syncTop(); if(document.fonts && document.fonts.ready) document.fonts.ready.then(syncTop);
+const SH = ()=>sheet.offsetHeight;
+const SNAP = {peek:()=>SH()-136, half:()=>Math.round(SH()*0.5), full:()=>0};
+function applyOff(off){ sheet.style.setProperty('--sy', off+'px'); document.documentElement.style.setProperty('--sv', (SH()-off)+'px'); }
+function setSheet(pos){ state.sheet=pos; sheet.classList.toggle('full', pos==='full'); applyOff(SNAP[pos]()); }
+let dragging=false, startY=0, startOff=0, moved=false, pid=null;
+const canDragFrom = t => t.closest('#grab') || (state.sheet!=='full' && t.closest('#panel'));
+sheet.addEventListener('pointerdown',e=>{ if(!mobile() || !canDragFrom(e.target)) return; dragging=true; moved=false; pid=e.pointerId; startY=e.clientY; startOff=SNAP[state.sheet](); });
+sheet.addEventListener('pointermove',e=>{ if(!dragging) return; const dy=e.clientY-startY; if(!moved && Math.abs(dy)<8) return;
+  if(!moved){ moved=true; sheet.classList.add('drag'); try{ sheet.setPointerCapture(pid); }catch(_){} }
+  applyOff(Math.max(0, Math.min(SNAP.peek(), startOff+dy))); e.preventDefault(); });
+const endDrag = e=>{ if(!dragging) return; dragging=false; sheet.classList.remove('drag'); try{ sheet.releasePointerCapture(pid); }catch(_){}
+  if(!moved){ if(e.target.closest('#grab')) setSheet(state.sheet==='peek'?'half':state.sheet==='half'?'full':'peek'); return; }   // a tap on the handle cycles; a tap in the body is a tap
+  const off = startOff+(e.clientY-startY); let best='half', bd=1e9; ['peek','half','full'].forEach(c=>{const d=Math.abs(SNAP[c]()-off); if(d<bd){bd=d;best=c;}}); setSheet(best); };
+sheet.addEventListener('pointerup',endDrag); sheet.addEventListener('pointercancel',endDrag);
+window.addEventListener('resize',()=>{ syncTop(); if(mobile()) setSheet(state.sheet); else { sheet.style.removeProperty('--sy'); document.documentElement.style.removeProperty('--sv'); sheet.classList.remove('full'); } map.invalidateSize(); });
 
 /* ---------- intro ---------- */
 const intro = $('#intro');

@@ -96,6 +96,14 @@ st.markdown(
       }}
       [data-testid="stMain"] {{ padding: 0 !important; }}
       [data-testid="stVerticalBlock"], [data-testid="element-container"] {{ gap: 0 !important; }}
+      [data-testid="stElementContainer"]:has(> [data-testid="stIFrame"]),
+      [data-testid="stElementContainer"]:has(> iframe),
+      [data-testid="stIFrame"] {{
+        height: 100vh !important; height: 100dvh !important; overflow: hidden !important;
+      }}
+      [data-testid="stMain"], [data-testid="stMainBlockContainer"], [data-testid="stVerticalBlock"] {{
+        height: 100vh !important; height: 100dvh !important; overflow: hidden !important;
+      }}
       [data-testid="stAppViewContainer"] iframe {{
         height: 100vh !important; height: 100dvh !important;
         width: 100% !important; border: none !important; display: block;

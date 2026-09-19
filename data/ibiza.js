@@ -16,7 +16,7 @@ ROUTES.BOAT_BASSA = [[38.97693,1.29862],[38.9775,1.2930],[38.9755,1.2840],[38.97
 const LINE = {
   AERO1:{c:'#6FA35B',n:'AERO1',d:'Airport ↔ Sant Antoni'},
   T1:{c:'#2E86AB',n:'T1',d:'Sant Antoni ↔ Sant Rafel ↔ Port d\'Eivissa'},
-  D1:{c:'#D4472F',n:'D1',d:'Discobus · Sant Antoni ↔ Sant Rafel (UNVRS, Amnesia) ↔ Ibiza port'},
+  D1:{c:'#D4472F',n:'D1',d:'Discobus · Sant Antoni ↔ Sant Rafel (UNVRS, Amnesia) ↔ Ibiza port',shares:'T1'},
   D3:{c:'#B23A8F',n:'D3',d:'Discobus · Sant Antoni ↔ Platja d\'en Bossa (Ushuaïa, Hï)'},
   P4:{c:'#E8A33D',n:'P4',d:'Sant Antoni ↔ Cala de Bou ↔ Platges de Comte'},
   P5:{c:'#E07A2E',n:'P5',d:'Sant Antoni ↔ Cala de Bou ↔ Cala Bassa'},
@@ -74,8 +74,8 @@ const P = {
   comte:['Cala Comte (Platges de Comte)','beach',38.96265,1.22020,'The best beach and the best sunset on the island. Sunbeds capped €10, €5 after 15:30. Cliff steps west to Cala Escondida.','West coast'],
   escondida:['Cala Escondida','beach',38.96450,1.21700,'The quiet cove at the western end of Comte, down the cliff steps. (Position approximate.)','West coast'],
   stopComte:['P4 stop · Cala Comte','stop',38.96129,1.22085,'The 21:45 is the last P4: Cala de Bou 21:57, San Antonio 22:20. Taxi from here ≈€16.','West coast'],
-  stopRivMain:['Bus stop · H. Riviera (Av. Sant Agustí)','stop',38.96728,1.28514,'The stop on the main road behind the hotel — the P4 / P5 / A1 corridor and the P2. Four minutes\' walk.','Cala de Bou'],
-  stopRivBay:['Bus stop · H. Riviera (bay road)','stop',38.97068,1.28540,'The stop on the bay road right by the hotel.','Cala de Bou'],
+  stopRivMain:['Bus stop · H. Riviera (Av. Sant Agustí)','stop',38.96728,1.28514,'The stop on the main road behind the hotel — the P4 / P5 / A1 corridor. Four minutes\' walk.','Cala de Bou'],
+  stopRivBay:['Bus stop · H. Riviera (bay road)','stop',38.97068,1.28540,'The P2 stop on the bay road right by the hotel — the last 3.5 km from the bus station, hourly, last 23:30.','Cala de Bou'],
   stopCdB:['Bus stop · Cala de Bou','stop',38.96537,1.27684,'The timetabled "Cala de Bou" stop on Av. Sant Agustí: P4 out 21:57 / P5 21:10 on the way back; the A1 passes here 07:59 towards town.','Cala de Bou'],
   stopBerg:['Bus stop · H. Bergantín','stop',38.96782,1.30185,'P2 stop on the bay road, named in the timetable.','San Antonio Bay'],
   stopPdT:['Bus stop · Port des Torrent','stop',38.96383,1.26934,'P2 terminus; P4 / P5 pass through.','Port des Torrent'],
@@ -85,10 +85,10 @@ const P = {
   unvrs:['UNVRS (ex-Privilege)','night',38.95788,1.40826,'★ FISHER with Gorgon City · Thu 3 Sept from 23:30. €50 before midnight, €60 before 1am, €80 after. No published closing time.','Sant Rafel'],
   stopUnvrs:['D1 stop · Privilege / UNVRS','stop',38.95738,1.40273,'The D1 stop for UNVRS on the Sant Antoni road, same line as Amnesia.','Sant Rafel'],
   ushuaia:['Ushuaïa','night',38.88500,1.40536,'★ CALVIN HARRIS · Fri 4 Sept 17:00–23:00 — booked. Open-air, starts in daylight, 18+ with original ID. With MK, Illyus & Barrientos, Tyson O\'Brien.','Platja d\'en Bossa'],
-  hi:['Hï Ibiza','night',38.88603,1.40396,'Directly across the road from Ushuaïa. Fri 4: CamelPhat Summer Of Love from €40 · Wed 2: MEDUZA & James Hype €35 before midnight. No cloakroom.','Platja d\'en Bossa'],
+  hi:['Hï Ibiza','night',38.88603,1.40396,'Directly across the road from Ushuaïa. Fri 4: CamelPhat Summer Of Love — €35 before midnight, €40–45 before 1am, €50–55 standard. Wed 2: MEDUZA & James Hype, €35 before midnight. No cloakroom.','Platja d\'en Bossa'],
   stopPdB:['D3 stop · Ushuaïa / Hï','stop',38.88498,1.40405,'The D3 stops between the two clubs. After Ushuaïa closes: 23:33 (→ San Antonio 00:15), 00:03, 00:43, then every 30 min to 06:47.','Platja d\'en Bossa'],
   portIbz:['Port d\'Eivissa · T1 / D1 stop','stop',38.91124,1.43453,'Stay on the T1 to here rather than the bus station — the ferry terminal and Dalt Vila are both a short walk. The D1 back to San Antonio leaves from the port every 30 min to 06:30.','Ibiza Town'],
-  ferryIbz:['Estació Marítima Ibiza–Formentera','port',38.91243,1.43525,'Fast ferries to La Savina — Baleària, Trasmapi, Aquabus, Formentera Lines. A sailing every 20–30 min. ID required to board.','Ibiza Town'],
+
   taules:['Portal de ses Taules','sight',38.90821,1.43666,'The main gate — a steep stone drawbridge into the walled city. Wear proper shoes.','Dalt Vila'],
   escalinata:['S\'Escalinata','eat',38.90795,1.43388,'Cushions straight onto the stone steps on the ramp up. A drink here at 19:55.','Dalt Vila'],
   bernat:['Baluard de Sant Bernat','sight',38.90605,1.43638,'The sunset-facing bastion — Figueretes, Platja d\'en Bossa and the salt flats. Free. Sunset 20:17 on the Monday.','Dalt Vila'],
@@ -109,7 +109,7 @@ const P = {
   vedra:['Es Vedrà','sight',38.86784,1.19747,'The rock. Seen from the Capitán Nemo catamaran, or the Torre des Savinar path.','South-west'],
   // --- added for the September 2026 plan ---
   taxiRank:['Taxi rank · C/ des Caló 47','taxi',38.96990,1.28800,'92 m from the hotel door. Off a rank the meter starts at €4.00 instead of €5.45 — no need to phone.','Cala de Bou'],
-  terminal:['Estació Marítima Eivissa–Formentera','port',38.91243,1.43525,'Where the Formentera boats sail from — Avinguda de Santa Eulària. Not Botafoc, which is a 2.5 km walk away.','Ibiza Town'],
+  terminal:['Estació Marítima Eivissa–Formentera','port',38.91243,1.43525,'Where the Formentera boats sail from — Avinguda de Santa Eulària. Trasmapi, Aquabus, Formentera Lines and Baleària; a sailing every 20–30 min; ID to board. Not Botafoc, which is a 2.5 km walk away.','Ibiza Town'],
   cicheto:['El Cicheto','eat',38.88620,1.40620,'Carrer de Porreres 8. Italian, 4.8 from 677 reviews, €20–30, open to 02:00. The one to book for before the show.','Platja d’en Bossa'],
   zanzibar:['Zanzibar','eat',38.88600,1.40540,'110 m from Ushuaïa’s gate and 140 m from Hï’s door. Bar and grill, open to 04:30, €9–21 a head.','Platja d’en Bossa'],
   manoa:['Manoa','eat',38.88660,1.40600,'Same owners as Zanzibar, thirty seconds further. Burgers and strong cocktails, open to 04:00.','Platja d’en Bossa'],
@@ -123,7 +123,7 @@ const P = {
    place ids · geom polyline · r note · fx fact chips · alt/altgeom.
    ------------------------------------------------------------------ */
 const DAYS = [
-{ id:'ov', chip:'ALL', b:'', title:'The whole week, <em>on one map</em>', eyebrow:'Overview · every place, every line', sunset:null,
+{ id:'ov', chip:'WEEK', b:'', title:'The whole week, <em>on one map</em>', eyebrow:'Overview · every place, every line', sunset:null,
   lede:'Base camp, the beaches, the four big rooms, the restaurants, and every bus and boat between them. Pick a day to see just that day.' },
 
 { id:'d02', chip:'WED', b:'2', title:'Land, drop bags, <em>walk to the good bar</em>', eyebrow:'Wednesday 2 September · arrival', sunset:'20:23',
@@ -133,7 +133,7 @@ const DAYS = [
     {t:'19:25',ph:'night',mode:'plane',h:'Wheels down',from:'airport',to:'airport',r:'Clear by about 20:00.'},
     {t:'20:30',ph:'night',mode:'bus',line:'AERO1',h:'AERO1 → San Antonio bus station',from:'aeroStop',to:'busSA',geom:rev(ROUTES.AERO1),r:'Fifty minutes, straight from the terminal.',fx:['every 30 min','50 min','€4 card'],
       alt:'Taxi door to door ≈ €28–33, 30 min.',altgeom:ROUTES.TX_AIR_HOTEL,altfrom:'aeroStop',altto:'hotel'},
-    {t:'21:25',ph:'night',mode:'bus',line:'P2',h:'The last 3.5 km · P2 or a taxi',from:'busSA',to:'stopRivMain',geom:ROUTES.P2,r:'The hotel is in Cala de Bou, not the town.',fx:['P2 hourly','last 23:30','taxi ≈ €8']},
+    {t:'21:25',ph:'night',mode:'bus',line:'P2',h:'The last 3.5 km · P2 or a taxi',from:'busSA',to:'stopRivBay',geom:ROUTES.P2,r:'The hotel is in Cala de Bou, not the town.',fx:['P2 hourly','last 23:30','taxi ≈ €8']},
     {t:'22:00',ph:'night',mode:'walk',h:'Kumharas',from:'hotel',to:'kumharas',r:'Street food, live music, no booking. Open to midnight.',fx:['6 min','to midnight']},
     {t:'OPT',ph:'night',mode:'bus',line:'D3',h:'A first night out · Hï (MEDUZA, James Hype)',from:'busSA',to:'stopPdB',geom:ROUTES.D3,r:'€35 before midnight — the cheapest Hï door all week. The cost is tomorrow’s 08:30 start.',fx:['D3 to 06:47','€35']}
   ],
@@ -151,7 +151,7 @@ const DAYS = [
     {t:'17:45',ph:'day',mode:'bus',line:'L3',h:'Leave on the 17:45, not the last one',from:'stopIlletes',to:'stopSavina',geom:rev(ROUTES.L3),r:'Landing back before 21:00 saves the night taxi rate.',fx:['last bus 18:45']},
     {t:'18:30',ph:'day',mode:'ferry',line:'FERRY',h:'Ferry back → Ibiza',from:'savina',to:'terminal',geom:rev(ROUTES.FERRY),r:'Your operator sets your last sailing — ask when you buy.'},
     {t:'19:30',ph:'day',mode:'taxi',line:'TAXI',h:'Taxi from the port rank → hotel',from:'terminal',to:'hotel',geom:rev(ROUTES.T1D1).concat(ROUTES.TX_ST_HOTEL),r:'The rank is 210 m from the terminal door. Before 21:00 you are on the day rate.',fx:['€30–38 before 21:00','€36–46 after']},
-    {t:'20:45',ph:'night',mode:'bus',line:'P2',h:'Into town · Aragma',from:'stopRivMain',to:'aragma',geom:rev(ROUTES.P2),r:'Greek mezze, #1 of 228 in San Antonio. C/ Madrid 4. Kitchen shuts 23:00 — book it.',fx:['P2 or taxi ≈ €8','book ahead']},
+    {t:'20:45',ph:'night',mode:'bus',line:'P2',h:'Into town · Aragma',from:'stopRivBay',to:'aragma',geom:rev(ROUTES.P2),r:'Greek mezze, #1 of 228 in San Antonio. C/ Madrid 4. Kitchen shuts 23:00 — book it.',fx:['P2 or taxi ≈ €8','book ahead']},
     {t:'23:00',ph:'night',mode:'walk',h:'★ Ítaca · Soul House',from:'aragma',to:'itaca',r:'Free entry, 23:00–05:00 every Thursday. Beach terrace plus an indoor room, and the right side of town for home.',fx:['FREE','13 min flat','to 05:00']},
     {t:'late',ph:'night',mode:'taxi',line:'TAXI',h:'Taxi home from Passeig de ses Fonts',from:'fonts',to:'hotel',geom:ROUTES.TX_ST_HOTEL,r:'The last P2 left at 23:30. The rank is 6 minutes from Ítaca, 3 from Soul City.',fx:['≈ €8–10']}
   ],
@@ -164,7 +164,7 @@ const DAYS = [
   places:['hotel','xinxo','stopRivMain','busSA','stopPdB','cicheto','ushuaia','zanzibar','manoa','nash','hi'],
   legs:[
     {t:'11:00',ph:'day',mode:'walk',h:'Pool, and nothing else',from:'hotel',to:'xinxo',r:'Or Xinxó, four minutes away. Today is about arriving with legs.',fx:['4 min']},
-    {t:'15:45',ph:'day',mode:'bus',line:'P2',h:'Pre-drinks, then P2 or a taxi to the station',from:'stopRivMain',to:'busSA',geom:rev(ROUTES.P2),r:'Anything you drink here costs a quarter of what it does inside.',fx:['taxi ≈ €8']},
+    {t:'15:45',ph:'day',mode:'bus',line:'P2',h:'Pre-drinks, then P2 or a taxi to the station',from:'stopRivBay',to:'busSA',geom:rev(ROUTES.P2),r:'Anything you drink here costs a quarter of what it does inside.',fx:['taxi ≈ €8']},
     {t:'16:00',ph:'day',mode:'bus',line:'D3',h:'D3 → Platja d’en Bossa',from:'busSA',to:'stopPdB',geom:ROUTES.D3,r:'Starts at 16:00, which is exactly what a 17:00 door needs.',fx:['47 min','€4 card']},
     {t:'16:50',ph:'day',mode:'walk',h:'Eat before you go in · El Cicheto',from:'stopPdB',to:'cicheto',r:'Six hours inside with no re-entry. Three minutes away, 4.8 from 677 reviews. Book it.',fx:['3 min','€20–30']},
     {t:'17:00',ph:'day',mode:'walk',h:'★ Calvin Harris · Ushuaïa',from:'cicheto',to:'ushuaia',r:'Open-air, MK supporting. Runs to 23:00 and starts in daylight. 18+, physical ID.',fx:['BOOKED ✓','17:00 → 23:00','no re-entry']},
@@ -175,16 +175,16 @@ const DAYS = [
   calls:[{k:'ok',t:'You may have 90 minutes, not 30 — check the ticket',b:'Ushuaïa ends 23:00, Hï opens 23:30. But Hï sells in tiers: before midnight €35, before 1am €40–45, standard €50–55. A before-1am ticket buys a proper sit-down in between. Before-midnight means walking straight across.'}]
 },
 
-{ id:'d05', chip:'SAT', b:'5', title:'Cala Bassa, Es Virot, <em>then Bresh</em>', eyebrow:'Saturday 5 September · the big one', sunset:'20:19',
+{ id:'d05', chip:'SAT', b:'5', title:'Cala Bassa, Es Virot, <em>then Bresh</em>', eyebrow:'Saturday 5 September · the big one', sunset:'20:20',
   lede:'The P5 to Cala Bassa, back in time for sunset dinner on the Cala de Bou front, then the D1 to Amnesia for the season closing.',
   places:['hotel','stopRivMain','stopCdB','busSA','stopBassa','bassa','cbbc','saport','esvirot','canpujol','espueto','salvaje','stopAmnesia','amnesia'],
   legs:[
-    {t:'11:30',ph:'day',mode:'bus',line:'P5',h:'P5 → Cala Bassa',from:'busSA',to:'stopBassa',geom:ROUTES.P5,r:'About 34 minutes. It calls at Cala de Bou on the way, so you can join it on the bay road.',fx:['34 min','€1.85 card']},
+    {t:'11:40',ph:'day',mode:'bus',line:'P5',h:'P5 → Cala Bassa, joined at the Cala de Bou stop',from:'stopCdB',to:'stopBassa',geom:ROUTES.P5.slice(ROUTES.P5.findIndex(p=>p[1]<1.2860)),r:'About 25 minutes from here. The 11:30 out of San Antonio passes the Cala de Bou stop on Av. Sant Agustí, four minutes behind the hotel.',fx:['34 min from town','tap card']},
     {t:'12:30',ph:'day',mode:'walk',h:'Cala Bassa',from:'stopBassa',to:'bassa',r:'Wide, pine-backed, genuinely beautiful. The beach club is upscale lounge, not a party.'},
     {t:'18:15',ph:'day',mode:'bus',line:'P5',h:'Leave on time — this is the one that matters',from:'stopBassa',to:'stopCdB',geom:rev(ROUTES.P5).slice(0,rev(ROUTES.P5).findIndex(p=>p[1]>1.2765)+1),r:'The last P5 is 21:00 — an hour after sunset. For Es Virot as the sun goes down you need this one.',fx:['last bus 21:00'],
       alt:'Or the little boat back to San Antonio port — the nicer trip.',altgeom:rev(ROUTES.BOAT_BASSA),altfrom:'bassa',altto:'saport'},
-    {t:'20:00',ph:'night',mode:'walk',h:'Es Virot, for sunset',from:'hotel',to:'esvirot',r:'Walkable. Rice dishes are the reason to go — and they sidestep the fish-by-the-kilo trap.',fx:['sunset 20:19','walkable']},
-    {t:'23:00',ph:'night',mode:'bus',line:'P2',h:'To the station, then the D1',from:'stopRivMain',to:'busSA',geom:rev(ROUTES.P2),r:'Saturday taxi night-rate runs from 15:00. Buy the D1 return as you board.',fx:['taxi ≈ €8']},
+    {t:'20:00',ph:'night',mode:'walk',h:'Es Virot, for sunset',from:'hotel',to:'esvirot',r:'Walkable. Rice dishes are the reason to go — and they sidestep the fish-by-the-kilo trap.',fx:['sunset 20:20','walkable']},
+    {t:'23:00',ph:'night',mode:'bus',line:'P2',h:'To the station, then the D1',from:'stopRivBay',to:'busSA',geom:rev(ROUTES.P2),r:'Saturday taxi night-rate runs from 15:00. Buy the D1 return as you board.',fx:['taxi ≈ €8']},
     {t:'23:30',ph:'night',mode:'bus',line:'D1',h:'D1 → Amnesia',from:'busSA',to:'stopAmnesia',geom:ROUTES.T1D1.slice(0,ROUTES.T1D1.findIndex(p=>p[0]<38.9470)+1),r:'Every 30 minutes, thirteen minutes up the road.',fx:['€3 card','13 min']},
     {t:'23:45',ph:'night',mode:'walk',h:'★ Bresh · Amnesia',from:'stopAmnesia',to:'amnesia',r:'Main Room and the Terraza, whose glass roof floods with light at sunrise. Amnesia has lockers, unlike Hï.',fx:['TICKETS ✓','season closer','lockers']},
     {t:'06:00',ph:'night',mode:'bus',line:'D1',h:'D1 home, then the €8 taxi',from:'stopAmnesia',to:'busSA',geom:rev(ROUTES.T1D1.slice(0,ROUTES.T1D1.findIndex(p=>p[0]<38.9470)+1)),r:'Runs to 06:30. It solves the 4am taxi shortage completely.',fx:['to 06:30']}
@@ -197,7 +197,7 @@ const DAYS = [
   places:['hotel','xinxo','stopRivMain','stopCdB','busSA','stopComte','comte','escondida','espueto','coolcafe','kitchen62'],
   legs:[
     {t:'11:00',ph:'day',mode:'walk',h:'Slowest morning of the trip',from:'hotel',to:'xinxo',r:'The beach is four minutes from the door. No bus, no plan.'},
-    {t:'15:00',ph:'day',mode:'bus',line:'P4',h:'P4 → Cala Comte, joined on the bay road',from:'stopCdB',to:'stopComte',geom:ROUTES.P4.slice(ROUTES.P4.findIndex(p=>p[1]<1.2860)),r:'Thirty-five minutes. It calls at Cala de Bou on the way out.',fx:['35 min']},
+    {t:'15:00',ph:'day',mode:'bus',line:'P4',h:'P4 → Cala Comte, joined at the Cala de Bou stop',from:'stopCdB',to:'stopComte',geom:ROUTES.P4.slice(ROUTES.P4.findIndex(p=>p[1]<1.2860)),r:'About 25 minutes from here. The Cala de Bou stop is on Av. Sant Agustí, four minutes behind the hotel.',fx:['35 min']},
     {t:'15:40',ph:'day',mode:'walk',h:'€5 sunbeds · Cala Escondida for quiet',from:'stopComte',to:'comte',r:'Capped at €10, halved after 15:30. Cliff steps west to the quiet cove.',fx:['€5 after 15:30']},
     {t:'20:17',ph:'night',mode:'walk',h:'★ Sunset over the islands',from:'comte',to:'escondida',r:'The horizon is broken by islets, so you get the whole show. Buy the wine at the Spar before you leave — there is no bus back between sunset and the 21:45.',fx:['free']},
     {t:'21:45',ph:'night',mode:'bus',line:'P4',h:'The last P4 — do not miss it',from:'stopComte',to:'stopCdB',geom:rev(ROUTES.P4).slice(0,rev(ROUTES.P4).findIndex(p=>p[1]>1.2765)+1),r:'Cala de Bou 21:57. A taxi from out here is €16 and they do not hang around.',fx:['LAST BUS 21:45']},
@@ -206,16 +206,16 @@ const DAYS = [
   calls:[{k:'ok',t:'The best-value evening of the week',b:'Bus fare, a €5 sunbed and a bottle from the Spar: about €10–12 each for the island’s best sunset.'}]
 },
 
-{ id:'d07', chip:'MON', b:'7', title:'Saladeta by boat, <em>then the old town</em>', eyebrow:'Monday 7 September', sunset:'20:15',
+{ id:'d07', chip:'MON', b:'7', title:'Saladeta by boat, <em>then the old town</em>', eyebrow:'Monday 7 September', sunset:'20:17',
   lede:'The clearest water you will see, reached the good way. Then the only genuinely ancient thing on the island, for sunset from its walls.',
   places:['hotel','stopRivMain','busSA','fonts','salada','saladeta','stopSalada','portIbz','taules','escalinata','bernat','olivo','verge','bar1805','paradise'],
   legs:[
-    {t:'09:45',ph:'day',mode:'bus',line:'P2',h:'To the waterfront',from:'stopRivMain',to:'busSA',geom:rev(ROUTES.P2),r:'The boat kiosks are on Passeig de ses Fonts, ten minutes from the station.',fx:['P2 or taxi ≈ €8']},
+    {t:'09:45',ph:'day',mode:'bus',line:'P2',h:'To the waterfront',from:'stopRivBay',to:'busSA',geom:rev(ROUTES.P2),r:'The boat kiosks are on Passeig de ses Fonts, ten minutes from the station.',fx:['P2 or taxi ≈ €8']},
     {t:'10:30',ph:'day',mode:'boat',line:'BOAT',h:'Boat → Cala Salada',from:'fonts',to:'salada',geom:ROUTES.BOAT_SALADA,r:'Forty minutes up the coast, €9 return. The run itself is the point.',fx:['≈ 40 min','€9 return']},
     {t:'11:10',ph:'day',mode:'walk',h:'Round the path to Saladeta',from:'salada',to:'saladeta',r:'Ten to fifteen minutes on rock. No facilities at all — bring everything, wear trainers.',fx:['NO facilities']},
     {t:'16:45',ph:'day',mode:'bus',line:'P7',h:'Back on the P7, not the boat',from:'stopSalada',to:'busSA',geom:rev(ROUTES.P7),r:'Every 15 minutes to 20:50, four times cheaper, and the deadline cannot strand you.',fx:['every 15 min','last 20:50']},
     {t:'18:45',ph:'night',mode:'bus',line:'T1',h:'T1 → Port d’Eivissa',from:'busSA',to:'portIbz',geom:ROUTES.T1D1,r:'Stay on to the port stop — a much shorter climb to the walls.',fx:['every 15 min','45 min']},
-    {t:'19:40',ph:'night',mode:'walk',h:'Up through the walls · a drink on the steps',from:'portIbz',to:'taules',r:'Portal de ses Taules, then cushions straight onto the stone at S’Escalinata. Sunset from Baluard de Sant Bernat at 20:15, free.',fx:['sunset 20:15']},
+    {t:'19:40',ph:'night',mode:'walk',h:'Up through the walls · a drink on the steps',from:'portIbz',to:'taules',r:'Portal de ses Taules, then cushions straight onto the stone at S’Escalinata. Sunset from Baluard de Sant Bernat at 20:17, free.',fx:['sunset 20:17']},
     {t:'20:30',ph:'night',mode:'walk',h:'Dinner · El Olivo Mio, Plaça de Vila',from:'bernat',to:'olivo',r:'Booking currently held for Sunday — it needs moving to tonight.',fx:['⚠ rebook to Mon 7']},
     {t:'22:30',ph:'night',mode:'walk',h:'Carrer de la Verge',from:'olivo',to:'verge',r:'Twenty tiny bars in a lane below the walls. The dancing happens in the street. Bar 1805 to 04:00; Paradise Lost for actually dancing.',fx:['no ticket']},
     {t:'late',ph:'night',mode:'bus',line:'D1',h:'D1 from the port, then the €8 taxi',from:'portIbz',to:'busSA',geom:rev(ROUTES.T1D1),r:'Every 30 minutes to 06:30, so you never watch the clock in a bar.',fx:['to 06:30']}
@@ -225,14 +225,14 @@ const DAYS = [
 
 { id:'d08', chip:'TUE', b:'8', title:'<em>Free</em>', eyebrow:'Tuesday 8 September · last full day', sunset:'20:14',
   lede:'Nothing booked, on purpose. Four nights out by now and you fly tomorrow — decide this one over breakfast.',
-  places:['hotel','xinxo','busSA','nemo','vedra','obeach','gracioneta','saport','bassa','aragma','chikee','portIbz','pacha'],
+  places:['hotel','xinxo','busSA','nemo','vedra','obeach','gracioneta','aragma','chikee','portIbz','pacha'],
   legs:[
     {t:'10:00',ph:'day',mode:'boat',line:'BOAT',h:'Option · Es Vedrà by catamaran',from:'nemo',to:'vedra',geom:[[38.97932,1.30476],[38.9780,1.2960],[38.9740,1.2760],[38.9660,1.2400],[38.9560,1.2200],[38.9300,1.1950],[38.9000,1.1900],[38.8760,1.1930],[38.86784,1.19747]],r:'Capitán Nemo, 10:00–14:00 from the port. Underwater windows and a swim stop. A scenic sail, not a party boat.',fx:['needs booking']},
     {t:'13:00',ph:'day',mode:'walk',h:'Option · KISSTORY at O Beach',from:'hotel',to:'obeach',r:'13:00–22:00, garage and old skool. Walkable at both ends.',fx:['€25 before 14:00']},
-    {t:'—',ph:'day',mode:'walk',h:'Option · Cala Gracioneta',from:'busSA',to:'gracioneta',r:'Tiny cove fifteen minutes on foot from town. The lowest-effort beach of the week.',fx:['walkable']},
+    {t:'—',ph:'day',mode:'walk',h:'Option · Cala Gracioneta',from:'busSA',to:'gracioneta',r:'Tiny cove fifteen minutes on foot from the north end of town. The lowest-effort beach of the week.',fx:['walkable','≈ 15 min']},
     {t:'—',ph:'day',mode:'walk',h:'Option · do nothing at all',from:'hotel',to:'xinxo',r:'Xinxó is four minutes away and the pool is closer. A legitimate plan.',fx:['free']},
     {t:'19:30',ph:'night',mode:'taxi',line:'TAXI',h:'Dinner · Aragma, or Chi Kee Wun',from:'hotel',to:'chikee',geom:ROUTES.TX_HOTEL_CKW,r:'Both need a few days’ notice. Chi Kee Wun takes coordinates, not a street name: 38.972985, 1.309019.',fx:['taxi ≈ €8','book ahead']},
-    {t:'23:30',ph:'night',mode:'bus',line:'D1',h:'Option · D1 → Pacha',from:'busSA',to:'portIbz',geom:ROUTES.T1D1,r:'Gordo, from €30 — the cheapest big room of the week, and the D1 drops you at the door.',fx:['from €30','D1 to 06:30']}
+    {t:'23:30',ph:'night',mode:'bus',line:'D1',h:'Option · D1 → Pacha',from:'busSA',to:'pacha',geom:ROUTES.T1D1.concat([[38.91842,1.44321]]),r:'Gordo, from €30 — the cheapest big room of the week. The D1 drops you by the door and collects you from the same stop every 30 min to 06:30.',fx:['from €30','D1 to 06:30']}
   ],
   calls:[{k:'',t:'Whatever you do, do it early',b:'You check out tomorrow and fly at 20:15. If you go out, Pacha over Es Paradís — shorter journey home, and it does not run to seven in the morning.'}]
 },
@@ -243,7 +243,7 @@ const DAYS = [
   legs:[
     {t:'11:00',ph:'day',mode:'walk',h:'Check out, bags in storage · last swim',from:'hotel',to:'xinxo',r:'Reception will hold them. Four minutes to the water.',fx:['4 min']},
     {t:'13:30',ph:'day',mode:'walk',h:'Last lunch · Kumharas, or Es Cucó',from:'hotel',to:'kumharas',r:'Kumharas again, or Es Cucó up the hill for rotisserie chicken — bus out, taxi back.'},
-    {t:'15:45',ph:'day',mode:'bus',line:'P2',h:'Bags, then P2 or a taxi to the station',from:'stopRivMain',to:'busSA',geom:rev(ROUTES.P2),r:'Ten minutes in a taxi, about €8.',fx:['taxi ≈ €8']},
+    {t:'15:45',ph:'day',mode:'bus',line:'P2',h:'Bags, then P2 or a taxi to the station',from:'stopRivBay',to:'busSA',geom:rev(ROUTES.P2),r:'Ten minutes in a taxi, about €8.',fx:['taxi ≈ €8']},
     {t:'16:30',ph:'day',mode:'bus',line:'AERO1',h:'AERO1 → Airport',from:'busSA',to:'aeroStop',geom:ROUTES.AERO1,r:'Every 30 minutes, fifty minutes, €4 by card. The 16:30 lands you there at 17:20.',fx:['16:30 → 17:20','€4 card'],
       alt:'Or one taxi from the door: ≈ €30, 30 minutes. Worth it with more luggage than you flew out with.',altgeom:rev(ROUTES.TX_AIR_HOTEL),altfrom:'hotel',altto:'aeroStop'},
     {t:'20:15',ph:'night',mode:'plane',h:'Wheels up',from:'airport',to:'airport',r:'Sunset is 20:12 — right side of the plane and you get it on the way out.'}
@@ -256,7 +256,9 @@ const META = {
   product:'Latitude', edition:'Ibiza', dates:'2–9 September 2026', season:'September 2026',
   strap:'A week, on one map',
   centre:[38.93,1.35], zoom:11, base:'hotel',
-  tilesKey:'cb1_2b01_1_0552a6d00221009dab1f3482'
+  tilesKey:'cb1_2b01_1_0552a6d00221009dab1f3482',
+  // which drawn geometry belongs to which line on the overview (D1 shares the T1 road — see LINE.D1.shares)
+  routeLines:{AERO1:'AERO1',T1D1:'T1',D3:'D3',P4:'P4',P5:'P5',P7:'P7',P2:'P2',L3:'L3',FERRY:'FERRY',BOAT_SALADA:'BOAT',BOAT_BASSA:'BOAT',TX_ST_HOTEL:'TAXI',TX_HOTEL_CKW:'TAXI',TX_AIR_HOTEL:'TAXI'}
 };
 
 /* memories land here in phase three: {id, ts, day, place, lat, lng, type:'photo'|'video', src, thumb, caption} */
